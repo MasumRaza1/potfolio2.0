@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Light mode styles */
+body {
+  background-color: #f5f7fa;
+  color: #111111;
+}
+/* Light mode styles */
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+/* Light mode styles */
+.card {
+  background-color: #fff; 
+  color: #111111; 
+}
+
+/* Dark mode styles */
+.dark-mode .card {
+  background-color: #1a1a1a; 
+  color: #f5f5f5; 
+  border: 1px solid #888888; 
+}
+
+/* Light mode styles */
+.social-link i {
+  font-size: 32px;
+  color: #212529; /* Icon color in light mode */
+}
+
+/* Dark mode styles */
+.dark-mode .social-link i {
+  color: #f5f5f5; /* Icon color in dark mode */
+}
+
+/* Dark mode styles for the Experience section */
+.dark-mode .ExperienceBG {
+  background-color: #1a1a1a; /* Background color in dark mode */
+  color: #fff; /* Text color in dark mode */
+}
+
+.dark-mode .CV-timeline-heading {
+  color: #fff; /* Timeline heading text color in dark mode */
+}
+
+.dark-mode .CV-job-timeline-item {
+  color: #fff; /* Job timeline item text color in dark mode */
+}
+.dark-mode p{
+  color: #f5f7fa;
+}
+.dark-mode .CV-timeline-heading-title{
+  color: #f5f5f5;
+}
+
+
+
+
+/* Toggle button styles */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #212529;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #212529;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+
+
+/* logo  */
+.logo{
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 32px;
+}
+.blackBG{
+    background-color: #212529;
+    color: #f5f7fa;
+    padding:  5px;
+    border-radius: 50px;
+    /* font-family: "Comic Sans MS", "Comic Sans", cursive; */
+}
+/* eduction  */
+.college img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    height: 200px;
+    width: 200px;
+    
+  }
+
+  /* project  */
+
+
+  /* Experience  */
+  .ExperienceBG{
+    background-image: url('/images/p6.png');
+    z-index: -99;
+  }
+  .CV-page {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 2em;
+    color: #222222;
+    font-size: 1em;
+    font-family: 'Lato', sans-serif;
+    background-image: url('/images/p6.png');
+  }
+  
+  @media all and (max-width: 500px) {
+    .CV-page {
+      padding: 0 1em;
+    }
+  }
+  
+  .CV-page {
+    width: 1100px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    color: #212529;
+  }
+  
+  .CV-secondaryHeading {
+    position: relative;
+    margin: 2em 0 0;
+    text-transform: uppercase;
+  }
+  /* Grid
+  ****************************************************/
+
+/* CSS for larger screens */
+.CV-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  margin: 0 auto;
+}
+
+/* CSS for smaller screens */
+@media (max-width: 600px) {
+  .CV-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.CV-page {
+  max-width: 100%; /* relative unit */
+  margin: 0 auto;
+  padding: 0 2em;
+  font-family: 'Lato', sans-serif;
+}
+
+.CV-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 600px) {
+  .CV-grid {
+    grid-template-columns: 1fr;
+  }
+}
+  
+
+  
+  .CV-timeline {
+    position: relative;
+    margin: 0 0 0 0.5em;
+    padding-left: 1.5em;
+    border-left: solid 1px #222222;
+    /* z-index: -1; */
+  
+  }
+  .dark-mode .CV-timeline {
+    position: relative;
+    margin: 0 0 0 0.5em;
+    padding-left: 1.5em;
+    border-left: solid 1px #fff;
+    /* z-index: -1; */
+  
+  }
+  
+  .CV-timeline:first-of-type {
+    margin-top: 1em;
+  }
+  
+  .CV-timeline:last-of-type {
+    border-left-color: transparent;
+  }
+  
+  
+  
+  .CV-timeline:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -1.0em; /* Adjust the left value for positioning */
+      display: block;
+      width: 2em; /* Adjust the width and height for the size of the circle */
+      height: 2em;
+      border-radius: 50%;
+      background-position: center; 
+      background-image: url('/images/favicon-32x32.png'); 
+      border: solid 1px #222222; /* Border for the circle */
+      border-radius: 50%;
+      background-repeat: no-repeat;
+  
+    }
+    .dark-mode .CV-timeline:before {
+      border: solid 1px rgb(162, 159, 159); /* Border for the circle */ 
+    }
+    
+    .CV-timeline1:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -1.0em;
+      display: block;
+      width: 2em;
+      height: 2em;
+      border-radius: 50%;
+      background-image: url('images/solitairIcon.png'); 
+      background-size: cover;
+      background-position: center;
+      border: solid 1px #222222;
+      border-radius: 50%;
+    }
+    .CV-timeline2:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -1.0em;
+      display: block;
+      width: 2em;
+      height: 2em;
+      border-radius: 50%;
+      background-image: url('images/sparksFoundation.png'); 
+      background-size: cover;
+      background-position: center;
+      border: solid 1px #222222;
+      border-radius: 50%;
+    }
+  
+  
+  .CV-timeline-heading {
+    margin: 0;
+    padding-bottom: 0.5em;
+    line-height: 1em;
+    font-weight: normal;
+    -webkit-transform: translateY(-0.1em);
+    -ms-transform: translateY(-0.1em);
+    transform: translateY(-0.1em);
+  }
+  
+  .CV-timeline-heading-title {
+    line-height: 1;
+    font-size: 0.8em;
+    color: #212529;
+
+  }
+  
+  .CV-timeline-heading-location {
+    font-size: 0.8em;
+  }
+  
+  .CV-timeline-heading-duration {
+    display: block;
+    font-size: 0.7em;
+    color: #6f6f6f;
+  }
+  
+  .CV-timeline-details {
+    display: block;
+    margin: 0;
+    padding-bottom: 2em;
+    padding: 0 0 2em 1em;
+    list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAGElEQVQIW2NkYGD4D8TIgJERTQDMpVAQAGaUAQbko3DsAAAAAElFTkSuQmCC");
+  }
+  
+  .CV-timeline-details-item {
+    margin-bottom: 0.5em;
+  }
+
+  
+/* social-meadia  */
+.social-media {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .social-link {
+    margin-right: 15px; 
+    text-decoration: none;
+    color: #212529; 
+  }
+  .social-link:hover{
+     color: #343739;
+  }
+  
+  .social-link i {
+    font-size: 32px; 
+  }
+  
+  .card{
+    border: #212529;
+  }
+
+
